@@ -1,0 +1,8 @@
+{
+  "name": "aindla-steven-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Aindla Steven - System Analyst & CSE Student",
+  "scripts": {
+    "start": "serve ."
+  }
+}

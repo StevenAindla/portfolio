@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aindla Steven | Aspiring System Analyst & CSE Student</title>
+  <meta name="description" content="Portfolio of Aindla Steven, Computer Science Engineering Student and Aspiring System Analyst specializing in databases, system workflows, and practical IT solutions.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Aindla Steven | Portfolio">
+  <meta property="og:description" content="System Analyst | Computer Science Engineering Student | Vignana Bharathi Institute of Technology">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              200: '#bae0fd',
+              300: '#7cc7fb',
+              400: '#38a8f7',
+              500: '#0e8ce9',
+              600: '#026ec7',
+              700: '#0357a1',
+              800: '#074b85',
+              900: '#0c3f6e',
+              950: '#082849',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom subtle grid background */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    }
+    .glow-effect {
+      background: radial-gradient(circle at 50% 50%, rgba(14, 140, 233, 0.18), transparent 70%);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-brand-500 selection:text-white relative min-h-screen overflow-x-hidden antialiased">
+
+  <!-- Ambient Glow Backgrounds -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[500px] glow-effect pointer-events-none -z-10 blur-3xl opacity-75"></div>
+  <div class="absolute top-[800px] right-0 w-[500px] h-[500px] bg-indigo-600/10 pointer-events-none -z-10 blur-3xl rounded-full"></div>
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none -z-20 opacity-40"></div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center font-bold text-white shadow-lg shadow-brand-500/20 group-hover:scale-105 transition">
+          AS
+        </div>
+        <span class="font-bold tracking-tight text-slate-100 group-hover:text-brand-400 transition">
+          Aindla Steven<span class="text-brand-500">.</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-brand-400 transition">About</a>
+        <a href="#skills" class="hover:text-brand-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-brand-400 transition">Projects</a>
+        <a href="#education" class="hover:text-brand-400 transition">Education</a>
+        <a href="#contact" class="hover:text-brand-400 transition">Contact</a>
+        <a href="mailto:stevenrajstevenraj368@gmail.com" class="px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-semibold transition shadow-md shadow-brand-600/30">
+          Hire Me
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Toggle navigation menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 bg-slate-900 border-b border-slate-800 space-y-3">
+      <a href="#about" class="block px-3 py-2 rounded-md hover:bg-slate-800 text-slate-300 hover:text-brand-400 transition">About</a>
+      <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-slate-800 text-slate-300 hover:text-brand-400 transition">Skills</a>
+      <a href="#projects" class="block px-3 py-2 rounded-md hover:bg-slate-800 text-slate-300 hover:text-brand-400 transition">Projects</a>
+      <a href="#education" class="block px-3 py-2 rounded-md hover:bg-slate-800 text-slate-300 hover:text-brand-400 transition">Education</a>
+      <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-slate-800 text-slate-300 hover:text-brand-400 transition">Contact</a>
+      <a href="mailto:stevenrajstevenraj368@gmail.com" class="block text-center px-4 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-semibold">
+        Get in Touch
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-24">
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-12 md:pt-20 pb-8 flex flex-col md:flex-row items-center justify-between gap-12">
+      <div class="flex-1 space-y-6 text-center md:text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-950/60 border border-brand-500/30 text-brand-300 text-xs sm:text-sm font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Available for Internships & Opportunities
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-sky-300 to-indigo-400">Aindla Steven</span>
+        </h1>
+
+        <p class="text-xl sm:text-2xl font-medium text-slate-300">
+          Aspiring <span class="text-brand-400">System Analyst</span> & Computer Science Engineering Student
+        </p>
+
+        <p class="text-slate-400 max-w-xl text-base sm:text-lg leading-relaxed">
+          Bridging real-world business requirements with robust technology solutions. Passionate about system workflow optimization, database architecture, data analytics, and scalable IT processes.
+        </p>
+
+        <!-- CTA Buttons & Quick Links -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+          <a href="#contact" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold transition flex items-center gap-2 shadow-lg shadow-brand-600/30 hover:scale-[1.02]">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+            Contact Me
+          </a>
+          <a href="#projects" class="px-6 py-3 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 text-slate-200 font-semibold border border-slate-700 transition flex items-center gap-2 hover:scale-[1.02]">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+            View Projects
+          </a>
+          <button onclick="window.print()" class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium border border-slate-800 transition flex items-center gap-2 hover:text-white" title="Print or save as PDF">
+            <i data-lucide="printer" class="w-5 h-5"></i>
+            Save / Print
+          </button>
+        </div>
+
+        <!-- Direct Contact Badges -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4 text-sm text-slate-400">
+          <a href="tel:8309702882" class="inline-flex items-center gap-2 hover:text-brand-400 transition">
+            <i data-lucide="phone" class="w-4 h-4 text-brand-400"></i>
+            <span>+91 8309702882</span>
+          </a>
+          <span class="text-slate-600 hidden sm:inline">•</span>
+          <a href="mailto:stevenrajstevenraj368@gmail.com" class="inline-flex items-center gap-2 hover:text-brand-400 transition">
+            <i data-lucide="at-sign" class="w-4 h-4 text-brand-400"></i>
+            <span>stevenrajstevenraj368@gmail.com</span>
+          </a>
+          <span class="text-slate-600 hidden sm:inline">•</span>
+          <span class="inline-flex items-center gap-1.5 text-slate-400">
+            <i data-lucide="map-pin" class="w-4 h-4 text-brand-400"></i>
+            <span>Hyderabad, India</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card / Profile Summary -->
+      <div class="w-full md:w-[380px] flex-shrink-0">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-indigo-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+          <div class="relative bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-2xl font-bold text-white shadow-inner">
+                AS
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Aindla Steven</h3>
+                <p class="text-sm text-brand-400 font-mono">B.Tech CSE • 3rd Year</p>
+                <div class="flex items-center gap-1 text-xs text-amber-400 mt-1">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <span>CGPA: 8.4 / 10.0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-3 border-t border-slate-800 pt-4 text-xs font-mono text-slate-400">
+              <div class="flex justify-between py-1 border-b border-slate-800/50">
+                <span class="text-slate-500">Focus:</span>
+                <span class="text-slate-200">System Workflow & Analysis</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-slate-800/50">
+                <span class="text-slate-500">Core Stack:</span>
+                <span class="text-slate-200">SQL, Python, C++, Power BI</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-slate-800/50">
+                <span class="text-slate-500">Flagship Project:</span>
+                <span class="text-brand-300 font-semibold">RUDRA Assistant</span>
+              </div>
+              <div class="flex justify-between py-1">
+                <span class="text-slate-500">Status:</span>
+                <span class="text-emerald-400 font-medium">Ready for Opportunities</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-400 leading-relaxed italic">
+              "Dedicated to transforming complex system requirements into seamless, user-centric IT workflows."
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Objective / About Section -->
+    <section id="about" class="scroll-mt-24 space-y-8">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+          <i data-lucide="compass" class="w-7 h-7 text-brand-400"></i>
+          Career Objective & About Me
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">My vision and purpose as an upcoming technology professional</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-2 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 sm:p-8 backdrop-blur relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-brand-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="space-y-4">
+            <span class="inline-block text-xs font-semibold uppercase tracking-wider text-brand-400 font-mono">Mission Statement</span>
+            <blockquote class="text-lg sm:text-xl text-slate-200 font-medium leading-relaxed">
+              "To build a career as a <span class="text-brand-400 font-semibold">System Analyst</span> by combining my knowledge of programming, databases, and system workflows to understand real-world requirements, improve existing processes, and help develop practical, reliable, and user-focused IT solutions."
+            </blockquote>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Currently pursuing my 3rd year in Computer Science and Engineering at <strong class="text-slate-300">Vignana Bharathi Institute of Technology</strong> with an academic record of 8.4 CGPA. I thrive in environments that challenge me to analyze complex workflows, dissect bottlenecks, and collaborate across teams to engineer structured, automated solutions.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 mt-6 border-t border-slate-800">
+            <div>
+              <div class="text-2xl font-bold text-white">8.4</div>
+              <div class="text-xs text-slate-400">B.Tech CGPA</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-white">3rd Year</div>
+              <div class="text-xs text-slate-400">Current Standing</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-emerald-400">100%</div>
+              <div class="text-xs text-slate-400">Commitment to Growth</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Value Pillars -->
+        <div class="space-y-4 flex flex-col justify-between">
+          <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-brand-500/40 transition">
+            <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center mb-3">
+              <i data-lucide="git-merge" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-white text-base">Requirement Gathering</h3>
+            <p class="text-xs text-slate-400 mt-1">Understanding business logic and translating user pain points into technical blueprints.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-brand-500/40 transition">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-3">
+              <i data-lucide="database" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-white text-base">Data & Process Flow</h3>
+            <p class="text-xs text-slate-400 mt-1">Structuring relational database schemas and visualizing optimized data paths.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-brand-500/40 transition">
+            <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center mb-3">
+              <i data-lucide="zap" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-white text-base">Automation & Efficiency</h3>
+            <p class="text-xs text-slate-400 mt-1">Eliminating repetitive manual overhead with structured digital workflows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical & Soft Skills Section -->
+    <section id="skills" class="scroll-mt-24 space-y-8">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+          <i data-lucide="cpu" class="w-7 h-7 text-brand-400"></i>
+          Technical & Analytical Competencies
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">Core toolkit encompassing programming languages, data analytics, and analytical capabilities</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Programming -->
+        <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/50 transition duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 rounded-xl bg-blue-500/10 text-blue-400">
+              <i data-lucide="code-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg">Programming</h3>
+          </div>
+          <p class="text-xs text-slate-400 mb-4">Strong foundational logic, object-oriented concepts, and procedural programming.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-brand-300 font-mono text-xs border border-slate-700">Python</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-brand-300 font-mono text-xs border border-slate-700">C++</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-brand-300 font-mono text-xs border border-slate-700">C</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-brand-300 font-mono text-xs border border-slate-700">Data Structures</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/50 transition duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400">
+              <i data-lucide="database" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg">Databases</h3>
+          </div>
+          <p class="text-xs text-slate-400 mb-4">Designing relational schemas, writing queries, and managing data integrity.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-emerald-300 font-mono text-xs border border-slate-700">SQL</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-emerald-300 font-mono text-xs border border-slate-700">MySQL</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-emerald-300 font-mono text-xs border border-slate-700">Schema Design</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-emerald-300 font-mono text-xs border border-slate-700">Relational Models</span>
+          </div>
+        </div>
+
+        <!-- Data & Analytics -->
+        <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/50 transition duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400">
+              <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg">Data & BI</h3>
+          </div>
+          <p class="text-xs text-slate-400 mb-4">Transforming raw records into visual decision-making metrics and dashboards.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-amber-300 font-mono text-xs border border-slate-700">Power BI</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-amber-300 font-mono text-xs border border-slate-700">Microsoft Excel</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-amber-300 font-mono text-xs border border-slate-700">Data Visualization</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-amber-300 font-mono text-xs border border-slate-700">Analytics</span>
+          </div>
+        </div>
+
+        <!-- Systems & Process -->
+        <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/50 transition duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 rounded-xl bg-purple-500/10 text-purple-400">
+              <i data-lucide="workflow" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg">System Analysis</h3>
+          </div>
+          <p class="text-xs text-slate-400 mb-4">Translating high-level needs into streamlined workflow documentation and architecture.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-purple-300 font-mono text-xs border border-slate-700">Problem Solving</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-purple-300 font-mono text-xs border border-slate-700">Process Improvement</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-purple-300 font-mono text-xs border border-slate-700">System Workflows</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800 text-purple-300 font-mono text-xs border border-slate-700">Specs / Docs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional / Soft Skills Banner -->
+      <div class="bg-slate-900/30 border border-slate-800/80 rounded-2xl p-6">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 font-mono mb-4 flex items-center gap-2">
+          <i data-lucide="users" class="w-4 h-4 text-brand-400"></i>
+          Soft Skills & Professional Attributes
+        </h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+          <div class="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 text-slate-200 text-sm">
+            <i data-lucide="clock" class="w-4 h-4 text-brand-400"></i>
+            <span>Time Management</span>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 text-slate-200 text-sm">
+            <i data-lucide="shuffle" class="w-4 h-4 text-indigo-400"></i>
+            <span>Adaptability</span>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 text-slate-200 text-sm">
+            <i data-lucide="handshake" class="w-4 h-4 text-emerald-400"></i>
+            <span>Team Collaboration</span>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 text-slate-200 text-sm">
+            <i data-lucide="ear" class="w-4 h-4 text-amber-400"></i>
+            <span>Active Listening</span>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 text-slate-200 text-sm">
+            <i data-lucide="message-square" class="w-4 h-4 text-sky-400"></i>
+            <span>Communication</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="scroll-mt-24 space-y-8">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+          <i data-lucide="folder-git-2" class="w-7 h-7 text-brand-400"></i>
+          Featured Projects
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">Applied engineering and practical system development</p>
+      </div>
+
+      <!-- Main Project Card -->
+      <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 lg:p-10 relative overflow-hidden shadow-2xl">
+        <div class="absolute -top-24 -right-24 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-col lg:flex-row items-start justify-between gap-8">
+          <div class="flex-1 space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 text-xs font-mono uppercase tracking-wide">
+              Featured Flagship Project
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+              RUDRA <span class="text-slate-400 font-normal text-xl sm:text-2xl">– Rapid Universal Daily Routine Assistant</span>
+            </h3>
+
+            <p class="text-slate-300 leading-relaxed text-base sm:text-lg">
+              A comprehensive system designed to support daily routine management and reduce manual administrative work through a faster, structured, and organized automated process.
+            </p>
+
+            <!-- Key Responsibilities & Highlights -->
+            <div class="space-y-3 pt-2">
+              <h4 class="text-xs uppercase font-mono tracking-wider text-slate-400">Key Contributions & Architecture Focus</h4>
+              <ul class="space-y-2.5 text-sm text-slate-300">
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 p-1 rounded-md bg-brand-500/20 text-brand-400">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <span><strong>Comprehensive System Documentation:</strong> Developed end-to-end documentation articulating system functionality, actors, data flow, and workflow specifications.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 p-1 rounded-md bg-brand-500/20 text-brand-400">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <span><strong>Process Optimization:</strong> Engineered to eliminate repetitive manual tasks and enhance day-to-day operational efficiency.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 p-1 rounded-md bg-brand-500/20 text-brand-400">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <span><strong>System Requirements Engineering:</strong> Applied technical analytical thinking to identify user pain points, structure proposed systems, and establish execution roadmaps.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tech Tags -->
+            <div class="flex flex-wrap gap-2 pt-3">
+              <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">System Analysis</span>
+              <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Workflow Automation</span>
+              <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Process Design</span>
+              <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Documentation</span>
+              <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Python / Database</span>
+            </div>
+          </div>
+
+          <!-- Project Stats / Flow Card -->
+          <div class="w-full lg:w-72 bg-slate-950/70 border border-slate-800/90 rounded-2xl p-5 space-y-4">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-brand-400">Workflow Stages</h4>
+            
+            <div class="space-y-3 text-xs">
+              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                <span class="w-6 h-6 rounded-lg bg-brand-600/30 text-brand-300 flex items-center justify-center font-bold">1</span>
+                <div>
+                  <p class="font-semibold text-white">Input Routine</p>
+                  <p class="text-slate-400 text-[11px]">Capture daily activities</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                <span class="w-6 h-6 rounded-lg bg-brand-600/30 text-brand-300 flex items-center justify-center font-bold">2</span>
+                <div>
+                  <p class="font-semibold text-white">Workflow Logic</p>
+                  <p class="text-slate-400 text-[11px]">Prioritization & routing</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                <span class="w-6 h-6 rounded-lg bg-brand-600/30 text-brand-300 flex items-center justify-center font-bold">3</span>
+                <div>
+                  <p class="font-semibold text-white">Automated Output</p>
+                  <p class="text-slate-400 text-[11px]">Efficiency & time savings</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 text-[11px] text-slate-500 text-center">
+              Designed & documented by Aindla Steven
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Academics Section -->
+    <section id="education" class="scroll-mt-24 space-y-8">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+          <i data-lucide="graduation-cap" class="w-7 h-7 text-brand-400"></i>
+          Education & Academic Background
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">Formal educational trajectory and performance milestones</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- B.Tech -->
+        <div class="relative bg-slate-900/60 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500/40 transition">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs font-mono font-semibold">Undergraduate</span>
+              <span class="text-xs text-emerald-400 font-medium">Currently Pursuing</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">B.Tech – Computer Science & Engineering</h3>
+            <p class="text-slate-300 text-sm font-medium">Vignana Bharathi Institute of Technology</p>
+            <p class="text-xs text-slate-400">Hyderabad, Telangana</p>
+          </div>
+          <div class="pt-6 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <span class="text-xs text-slate-400">Current Status: 3rd Year</span>
+            <span class="text-sm font-bold text-amber-400 bg-amber-400/10 px-2.5 py-1 rounded-md border border-amber-400/20">CGPA: 8.4</span>
+          </div>
+        </div>
+
+        <!-- Intermediate -->
+        <div class="relative bg-slate-900/60 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500/40 transition">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 text-xs font-mono font-semibold">Intermediate (10+2)</span>
+              <span class="text-xs text-slate-400 font-medium">Completed</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Higher Secondary Education</h3>
+            <p class="text-slate-300 text-sm font-medium">Tejas Junior College</p>
+            <p class="text-xs text-slate-400">Telangana State Board</p>
+          </div>
+          <div class="pt-6 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <span class="text-xs text-slate-400">Score Achieved</span>
+            <span class="text-sm font-bold text-indigo-300 bg-indigo-400/10 px-2.5 py-1 rounded-md border border-indigo-400/20">700 Marks</span>
+          </div>
+        </div>
+
+        <!-- School -->
+        <div class="relative bg-slate-900/60 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500/40 transition">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-mono font-semibold">Secondary (10th)</span>
+              <span class="text-xs text-slate-400 font-medium">Completed</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Secondary School Certificate</h3>
+            <p class="text-slate-300 text-sm font-medium">Sunrise Model Concept School</p>
+            <p class="text-xs text-slate-400">Telangana</p>
+          </div>
+          <div class="pt-6 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <span class="text-xs text-slate-400">Academic Grade</span>
+            <span class="text-sm font-bold text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded-md border border-emerald-400/20">CGPA: 8.7</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Achievements Section -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Certifications -->
+      <div class="space-y-6">
+        <div class="border-b border-slate-800 pb-3">
+          <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-3">
+            <i data-lucide="award" class="w-6 h-6 text-brand-400"></i>
+            Certifications & Learning
+          </h2>
+        </div>
+
+        <div class="space-y-3">
+          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center gap-4">
+            <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold">
+              <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">C / C++ Technical Learning</h4>
+              <p class="text-xs text-slate-400">In-depth procedural and object-oriented fundamentals</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center gap-4">
+            <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
+              <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Python Technical Learning</h4>
+              <p class="text-xs text-slate-400">Core logic, data manipulation, and scripting</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center gap-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Cisco – Learning / Certification</h4>
+              <p class="text-xs text-slate-400">Networking and foundational IT architectures</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center gap-4">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold">
+              <i data-lucide="book-open" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Springboard – Learning / Certification</h4>
+              <p class="text-xs text-slate-400">Specialized technical training and skill enhancement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements & Hackathons -->
+      <div class="space-y-6">
+        <div class="border-b border-slate-800 pb-3">
+          <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-3">
+            <i data-lucide="trophy" class="w-6 h-6 text-brand-400"></i>
+            Achievements & Engagement
+          </h2>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-950 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center">
+            <i data-lucide="terminal" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Hackathon Participation & Collaborative Innovation</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Actively participated in competitive hackathons, gaining intensive practical exposure to rapid problem-solving, real-time debugging, and agile collaborative software engineering.
+          </p>
+          <div class="space-y-2 pt-2 text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-brand-400"></i>
+              <span>High-pressure problem-solving and rapid prototyping</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-brand-400"></i>
+              <span>Multi-disciplinary team communication and idea pitch delivery</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-brand-400"></i>
+              <span>Practical exposure to end-to-end system development cycles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section id="contact" class="scroll-mt-24 space-y-8">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+          <i data-lucide="send" class="w-7 h-7 text-brand-400"></i>
+          Get In Touch
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">Let's discuss opportunities, internships, or system projects</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <!-- Contact Information Cards -->
+        <div class="md:col-span-2 space-y-4">
+          <a href="mailto:stevenrajstevenraj368@gmail.com" class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/50 flex items-center gap-4 transition group">
+            <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center group-hover:scale-110 transition">
+              <i data-lucide="mail" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400 font-mono">Email Address</div>
+              <div class="text-sm sm:text-base font-semibold text-white break-all">stevenrajstevenraj368@gmail.com</div>
+            </div>
+          </a>
+
+          <a href="tel:8309702882" class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/50 flex items-center gap-4 transition group">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition">
+              <i data-lucide="phone-call" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400 font-mono">Phone Number</div>
+              <div class="text-sm sm:text-base font-semibold text-white">+91 8309702882</div>
+            </div>
+          </a>
+
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center">
+              <i data-lucide="map-pin" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400 font-mono">Location</div>
+              <div class="text-sm sm:text-base font-semibold text-white">Hyderabad, Telangana, India</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Message Form -->
+        <div class="md:col-span-3 bg-slate-900/40 border border-slate-800 rounded-2xl p-6 sm:p-8">
+          <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-xs font-mono text-slate-400 mb-1">Your Name</label>
+                <input type="text" id="name" required class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition text-sm" placeholder="John Doe">
+              </div>
+              <div>
+                <label for="email" class="block text-xs font-mono text-slate-400 mb-1">Your Email</label>
+                <input type="email" id="email" required class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition text-sm" placeholder="john@example.com">
+              </div>
+            </div>
+
+            <div>
+              <label for="subject" class="block text-xs font-mono text-slate-400 mb-1">Subject</label>
+              <input type="text" id="subject" required class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition text-sm" placeholder="Internship / Role Inquiry">
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-mono text-slate-400 mb-1">Message</label>
+              <textarea id="message" rows="4" required class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition text-sm" placeholder="Hi Steven, we would like to discuss..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold transition flex items-center justify-center gap-2 shadow-lg shadow-brand-600/30">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              Send Message via Email
+            </button>
+            <p id="form-status" class="text-xs text-center text-slate-400 pt-1 hidden">
+              Opening your email client to send message...
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950 mt-20 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 <span class="text-slate-300 font-semibold">Aindla Steven</span>. All rights reserved.
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="#hero" class="hover:text-brand-400 transition">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when link clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Contact form mailto generator
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      const bodyText = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+      const mailtoUrl = `mailto:stevenrajstevenraj368@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+      
+      const status = document.getElementById('form-status');
+      status.classList.remove('hidden');
+
+      setTimeout(() => {
+        window.location.href = mailtoUrl;
+      }, 300);
+    }
+  </script>
+</body>
+</html>
